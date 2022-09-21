@@ -10,4 +10,10 @@
     <string name="TXT_name">Nombre</string>
     <string name="TXT_surname">Apellido</string>
     <string name="TXT_repeatpassword">Repetir contraseña</string>
+
+    //Categorías
+    <string name="TXT_sausages">Embutidos</string>
+    <string name="TXT_seitan">Seitán</string>
+    <string name="TXT_burguers">Burguers</string>
+    <string name="TXT_tofu">Tofu</string>
 </resources>
