@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#2DAF43"
-    tools:context=".MainActivity">
+    tools:context=".UserLogin">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
