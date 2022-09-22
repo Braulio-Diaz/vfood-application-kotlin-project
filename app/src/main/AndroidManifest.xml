@@ -14,10 +14,22 @@
         android:theme="@style/Theme.VFoodApplication"
         tools:targetApi="31">
         <activity
-            android:name=".category"
+            android:name=".CategoryRead"
             android:exported="false" />
         <activity
-            android:name=".user_register"
+            android:name=".CategoryCreate"
+            android:exported="false" />
+        <activity
+            android:name=".CategoryUpdate"
+            android:exported="false" />
+        <activity
+            android:name=".CategoryDelete"
+            android:exported="false" />
+        <activity
+            android:name=".Category"
+            android:exported="false" />
+        <activity
+            android:name=".UserRegister"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
