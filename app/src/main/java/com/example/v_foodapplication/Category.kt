@@ -10,27 +10,27 @@ class Category : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_category)
 
-        val fab_delete = findViewById<FloatingActionButton>(R.id.fab_delete)
-        val fab_update = findViewById<FloatingActionButton>(R.id.fab_update)
-        val fab_create = findViewById<FloatingActionButton>(R.id.fab_create)
-        val fab_read = findViewById<FloatingActionButton>(R.id.fab_read)
+        val fab_category_delete = findViewById<FloatingActionButton>(R.id.fab_category_delete)
+        val fab_category_update = findViewById<FloatingActionButton>(R.id.fab_category_update)
+        val fab_category_create = findViewById<FloatingActionButton>(R.id.fab_category_create)
+        val fab_category_read = findViewById<FloatingActionButton>(R.id.fab_category_read)
 
-        fab_delete.setOnClickListener {
+        fab_category_delete.setOnClickListener {
             val intent = Intent(this@Category,CategoryDelete::class.java)
             startActivity(intent)
         }
 
-        fab_update.setOnClickListener {
+        fab_category_update.setOnClickListener {
             val intent = Intent(this@Category,CategoryUpdate::class.java)
             startActivity(intent)
         }
 
-        fab_create.setOnClickListener {
+        fab_category_create.setOnClickListener {
             val intent = Intent(this@Category,CategoryCreate::class.java)
             startActivity(intent)
         }
 
-        fab_read.setOnClickListener {
+        fab_category_read.setOnClickListener {
             val intent = Intent(this@Category,CategoryRead::class.java)
             startActivity(intent)
         }
