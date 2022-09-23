@@ -11,9 +11,15 @@ class CategoryRead : AppCompatActivity() {
         setContentView(R.layout.activity_category_read)
 
         val fab_product_delete = findViewById<FloatingActionButton>(R.id.fab_product_delete)
+        val fab_product_update = findViewById<FloatingActionButton>(R.id.fab_product_update)
 
         fab_product_delete.setOnClickListener {
             val intent = Intent(this@CategoryRead,ProductDelete::class.java)
+            startActivity(intent)
+        }
+
+        fab_product_update.setOnClickListener {
+            val intent = Intent(this@CategoryRead,ProductUpdate::class.java)
             startActivity(intent)
         }
     }
