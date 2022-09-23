@@ -28,9 +28,9 @@
 
     //Subir imagen
     <string name="BTN_upload">Subir imagen</string>
-    
-    //Actualizar Producto
-    <string name="TXT_product_update_name">Tofu Orgánico</string>
-    <string name="TXT_product_update_brand">Marca</string>
-    <string name="TXT_product_update_price">Precio</string>
+
+    //Producto
+    <string name="TXT_product_name">Producto</string>
+    <string name="TXT_product_brand">Marca</string>
+    <string name="TXT_product_price">Precio</string>
 </resources>
