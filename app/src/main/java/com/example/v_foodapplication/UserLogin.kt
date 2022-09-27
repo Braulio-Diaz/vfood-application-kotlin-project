@@ -35,6 +35,9 @@ class UserLogin : AppCompatActivity() {
             var password = til_password.editText?.text.toString()
 
             Toast.makeText(this@UserLogin,email+" "+password,Toast.LENGTH_SHORT).show()
+
+            val intent = Intent(this@UserLogin,Category::class.java)
+            startActivity(intent)
         }
     }
 }
