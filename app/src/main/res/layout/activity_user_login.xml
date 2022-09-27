@@ -69,7 +69,6 @@
         <com.google.android.material.textfield.TextInputEditText
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
-
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/ic_baseline_email_24"
             android:hint="@string/TXT_email" />
@@ -85,14 +84,15 @@
         android:background="#FFFFFF"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
-        app:layout_constraintTop_toBottomOf="@+id/til_email">
+        app:layout_constraintTop_toBottomOf="@+id/til_email"
+        app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
-
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/ic_baseline_lock_24"
+            android:inputType="textPassword"
             android:hint="@string/TXT_password" />
     </com.google.android.material.textfield.TextInputLayout>
 
