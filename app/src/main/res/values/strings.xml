@@ -5,6 +5,7 @@
     <string name="BTN_register">Registrarse</string>
     <string name="TXT_email">E-mail</string>
     <string name="TXT_password">Contraseña</string>
+    <string name="CB_rememberuser">Recordar usuario</string>
 
     //Registrar Usuario
     <string name="TXT_name">Nombre</string>

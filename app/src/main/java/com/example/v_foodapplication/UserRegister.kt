@@ -10,6 +10,9 @@ class UserRegister : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_register)
 
+        //Esconder la barra ActionBar
+        this.supportActionBar?.hide()
+
         val btn_form_register = findViewById<Button>(R.id.btn_form_register)
 
         btn_form_register.setOnClickListener {

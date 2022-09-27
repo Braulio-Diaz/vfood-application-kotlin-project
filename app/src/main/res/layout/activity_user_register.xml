@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="#FAF9F5"
     tools:context=".UserRegister">
 
     <androidx.constraintlayout.widget.Guideline
@@ -53,7 +53,7 @@
         android:id="@+id/linearLayout"
         android:layout_width="483dp"
         android:layout_height="148dp"
-        android:background="#2DAF43"
+        android:background="#FAF9F5"
         android:orientation="horizontal"
         android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/guideline10"
@@ -64,20 +64,20 @@
     </LinearLayout>
 
     <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="266dp"
-        android:layout_height="146dp"
+        android:id="@+id/imageView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_weight="1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline12"
+        app:layout_constraintBottom_toTopOf="@+id/guideline10"
+        app:layout_constraintEnd_toStartOf="@+id/guideline13"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/v_food" />
+        app:srcCompat="@drawable/brand_white" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:autoText="false"
         android:ellipsize="none"
         android:fontFamily="@font/alata"
