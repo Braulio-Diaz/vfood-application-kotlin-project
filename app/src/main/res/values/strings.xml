@@ -5,7 +5,7 @@
     <string name="BTN_register">Registrarse</string>
     <string name="TXT_email">E-mail</string>
     <string name="TXT_password">Contraseña</string>
-    <string name="CB_rememberuser">Recordar usuario</string>
+    <string name="SW_rememberuser">Recordar usuario</string>
 
     //Registrar Usuario
     <string name="TXT_name">Nombre</string>
@@ -17,6 +17,7 @@
     <string name="TXT_seitan">Seitán</string>
     <string name="TXT_burguers">Hamburguesas</string>
     <string name="TXT_tofu">Tofu</string>
+    <string name="TXT_category_name">Categoría</string>
 
     //Crear
     <string name="BTN_create">Crear</string>
@@ -34,4 +35,7 @@
     <string name="TXT_product_name">Producto</string>
     <string name="TXT_product_brand">Marca</string>
     <string name="TXT_product_price">Precio</string>
+
+    //Validaciones
+    <string name="null_field_error">Campo requerido</string>
 </resources>

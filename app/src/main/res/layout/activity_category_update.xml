@@ -91,7 +91,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline10" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_category_name"
+        android:id="@+id/til_category_name_update"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -104,7 +104,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/icons8_planta_bajo_el_sol_30"
-            android:hint="@string/TXT_tofu" />
+            android:hint="@string/TXT_category_name" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
@@ -117,7 +117,7 @@
         app:icon="@android:drawable/ic_menu_upload"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
         app:layout_constraintStart_toStartOf="@+id/guideline8"
-        app:layout_constraintTop_toBottomOf="@+id/til_category_name" />
+        app:layout_constraintTop_toBottomOf="@+id/til_category_name_update" />
 
     <Button
         android:id="@+id/btn_category_update"

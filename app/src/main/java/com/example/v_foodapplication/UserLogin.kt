@@ -29,10 +29,14 @@ class UserLogin : AppCompatActivity() {
             startActivity(intent)
         }*/
 
-        //CAPTURA DATOS Y LOS MUESTRA POR PANTALLA
+        //CAPTURA DATOS Y LOS MUESTRA POR PANTALLA Y LOS VALIDA
         btn_login.setOnClickListener {
             var email = til_email.editText?.text.toString()
             var password = til_password.editText?.text.toString()
+
+            val validate = Validate()
+            if (validate.validarCampoNulo(email)) til_email.error = getString(R.string.null_field_error) else til_email.error = ""
+            if (validate.validarCampoNulo(password)) til_password.error = getString(R.string.null_field_error) else til_password.error = ""
 
             Toast.makeText(this@UserLogin,email+" "+password,Toast.LENGTH_SHORT).show()
 
