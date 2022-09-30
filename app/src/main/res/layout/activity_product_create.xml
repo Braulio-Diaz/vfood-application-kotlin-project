@@ -91,7 +91,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline10" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_product_name_create"
+        android:id="@+id/til_create_product_name"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -108,14 +108,14 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_product_brand_create"
+        android:id="@+id/til_create_product_brand"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
         app:layout_constraintStart_toStartOf="@+id/guideline8"
-        app:layout_constraintTop_toBottomOf="@+id/til_product_name_create">
+        app:layout_constraintTop_toBottomOf="@+id/til_create_product_name">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -125,14 +125,14 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_product_price_create"
+        android:id="@+id/til_create_product_price"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
         app:layout_constraintStart_toStartOf="@+id/guideline8"
-        app:layout_constraintTop_toBottomOf="@+id/til_product_brand_create">
+        app:layout_constraintTop_toBottomOf="@+id/til_create_product_brand">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -151,7 +151,7 @@
         app:icon="@android:drawable/ic_menu_upload"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
         app:layout_constraintStart_toStartOf="@+id/guideline8"
-        app:layout_constraintTop_toBottomOf="@+id/til_product_price_create" />
+        app:layout_constraintTop_toBottomOf="@+id/til_create_product_price" />
 
     <Button
         android:id="@+id/btn_product_create"

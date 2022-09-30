@@ -24,11 +24,6 @@ class UserLogin : AppCompatActivity() {
             startActivity(intent)
         }
 
-        /*btn_login.setOnClickListener {
-            val intent = Intent(this@UserLogin,Category::class.java)
-            startActivity(intent)
-        }*/
-
         //CAPTURA DATOS Y LOS MUESTRA POR PANTALLA Y LOS VALIDA
         btn_login.setOnClickListener {
             var email = til_email.editText?.text.toString()

@@ -38,4 +38,5 @@
 
     //Validaciones
     <string name="null_field_error">Campo requerido</string>
+    <string name="invalid_email_format">Formato de correo invalido</string>
 </resources>
