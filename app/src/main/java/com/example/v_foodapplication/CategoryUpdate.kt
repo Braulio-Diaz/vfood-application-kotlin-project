@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 import com.google.android.material.textfield.TextInputLayout
 
 class CategoryUpdate : AppCompatActivity() {
@@ -20,6 +21,8 @@ class CategoryUpdate : AppCompatActivity() {
 
             val validate = Validate()
             if (validate.validarCampoNulo(categoryNameUpdate)) til_category_name_update.error = getString(R.string.null_field_error) else til_category_name_update.error = ""
+
+            Toast.makeText(this@CategoryUpdate, "Categoría actualizada", Toast.LENGTH_SHORT).show()
 
             val intent = Intent(this@CategoryUpdate,Category::class.java)
             startActivity(intent)

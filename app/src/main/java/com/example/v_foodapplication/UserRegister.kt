@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 import com.google.android.material.textfield.TextInputLayout
 
 class UserRegister : AppCompatActivity() {
@@ -37,6 +38,8 @@ class UserRegister : AppCompatActivity() {
             if (validate.validarCampoNulo(formEmail)) til_form_email.error = getString(R.string.null_field_error) else til_form_email.error = ""
             if (validate.validarCampoNulo(formPassword)) til_form_password.error = getString(R.string.null_field_error) else til_form_password.error = ""
             if (validate.validarCampoNulo(formRepeatPassword)) til_form_repeat_password.error = getString(R.string.null_field_error) else til_form_repeat_password.error = ""
+
+            Toast.makeText(this@UserRegister, "Usuario creado", Toast.LENGTH_SHORT).show()
         }
     }
 }

@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 import com.google.android.material.textfield.TextInputLayout
 
 class CategoryCreate : AppCompatActivity() {
@@ -20,6 +21,8 @@ class CategoryCreate : AppCompatActivity() {
             var validate = Validate()
 
             if (validate.validarCampoNulo(category_create)) til_category_create.error = getString(R.string.null_field_error) else til_category_create.error = ""
+
+            Toast.makeText(this@CategoryCreate, "Cateogría creada", Toast.LENGTH_SHORT).show()
 
             val intent = Intent(this@CategoryCreate,Category::class.java)
             startActivity(intent)

@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 import com.google.android.material.textfield.TextInputLayout
 
 class ProductCreate : AppCompatActivity() {
@@ -27,6 +28,8 @@ class ProductCreate : AppCompatActivity() {
             if (validate.validarCampoNulo(create_product_name)) til_create_product_name.error = getString(R.string.null_field_error) else til_create_product_name.error = ""
             if (validate.validarCampoNulo(create_product_brand)) til_create_product_brand.error = getString(R.string.null_field_error) else til_create_product_brand.error = ""
             if (validate.validarCampoNulo(create_product_price)) til_create_product_price.error = getString(R.string.null_field_error) else til_create_product_price.error = ""
+
+            Toast.makeText(this@ProductCreate, "Producto creado", Toast.LENGTH_SHORT).show()
 
             val intent = Intent(this@ProductCreate,CategoryRead::class.java)
             startActivity(intent)

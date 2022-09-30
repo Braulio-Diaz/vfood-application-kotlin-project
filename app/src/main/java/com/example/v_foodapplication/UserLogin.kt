@@ -26,6 +26,7 @@ class UserLogin : AppCompatActivity() {
 
         //CAPTURA DATOS Y LOS MUESTRA POR PANTALLA Y LOS VALIDA
         btn_login.setOnClickListener {
+
             var email = til_email.editText?.text.toString()
             var password = til_password.editText?.text.toString()
 
