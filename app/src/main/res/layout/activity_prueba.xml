@@ -5,21 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FAF9F5"
-    tools:context=".CategoryCreate">
+    tools:context=".Prueba">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.18" />
+        app:layout_constraintGuide_percent="0.03" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.82" />
+        app:layout_constraintGuide_percent="0.97" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline10"
@@ -64,13 +64,13 @@
     </LinearLayout>
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/imageView15"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_weight="1"
         app:layout_constraintBottom_toTopOf="@+id/guideline10"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline12"
+        app:layout_constraintEnd_toStartOf="@+id/guideline13"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/brand_white" />
 
@@ -82,7 +82,7 @@
         android:ellipsize="none"
         android:fontFamily="@font/alata"
         android:soundEffectsEnabled="false"
-        android:text="Crear categoría"
+        android:text="Tofu"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="34sp"
@@ -91,61 +91,31 @@
         app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toTopOf="@+id/guideline10" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_category_create"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline9"
-        app:layout_constraintStart_toStartOf="@+id/guideline8"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableStart="@drawable/icons8_planta_bajo_el_sol_30"
-            android:hint="Categoría" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <Button
-        android:id="@+id/btn_category_create_upload"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_product_create"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:backgroundTint="#85807F"
-        android:text="@string/BTN_upload"
-        app:icon="@android:drawable/ic_menu_upload"
+        android:layout_marginEnd="16dp"
+        android:clickable="true"
+        app:backgroundTint="#8A79B8"
+        app:layout_constraintBottom_toTopOf="@+id/guideline11"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
-        app:layout_constraintHorizontal_bias="0.487"
-        app:layout_constraintStart_toStartOf="@+id/guideline8"
-        app:layout_constraintTop_toBottomOf="@+id/til_categoy_date" />
+        app:srcCompat="@drawable/ic_baseline_add_circle_24" />
 
-    <Button
-        android:id="@+id/btn_category_create"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/BTN_create"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="387dp"
+        android:layout_height="194dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
         app:layout_constraintStart_toStartOf="@+id/guideline8"
-        app:layout_constraintTop_toBottomOf="@+id/btn_category_create_upload" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_categoy_date"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    <Spinner
+        android:id="@+id/spinner"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_height="39dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
         app:layout_constraintStart_toStartOf="@+id/guideline8"
-        app:layout_constraintTop_toBottomOf="@+id/til_category_create">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableStart="@drawable/icons8_planta_bajo_el_sol_30"
-            android:hint="@string/TXT_date" />
-    </com.google.android.material.textfield.TextInputLayout>
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

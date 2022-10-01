@@ -18,6 +18,7 @@
     <string name="TXT_burguers">Hamburguesas</string>
     <string name="TXT_tofu">Tofu</string>
     <string name="TXT_category_name">Categoría</string>
+    <string name="TXT_date">Seleccionar fecha</string>
 
     //Crear
     <string name="BTN_create">Crear</string>
