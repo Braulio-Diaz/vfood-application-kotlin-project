@@ -1,6 +1,7 @@
 package com.example.v_foodapplication
 
 import android.util.Patterns
+import android.widget.Spinner
 import java.util.regex.Pattern
 
 class Validate {
