@@ -10,7 +10,7 @@ class Validate {
      * FUNCION PARA VALIDAR SI EL TEXTO ES NULO
      */
     fun validarCampoNulo(texto : String): Boolean{
-        return texto.equals("") || texto.length == 0
+        return texto.equals(" ") || texto.length == 0
     }
 
     /**
