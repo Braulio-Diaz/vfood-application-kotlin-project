@@ -2,6 +2,7 @@ package com.example.v_foodapplication
 
 import android.util.Patterns
 import android.widget.Spinner
+import java.util.*
 import java.util.regex.Pattern
 
 class Validate {
@@ -10,7 +11,7 @@ class Validate {
      * FUNCION PARA VALIDAR SI EL TEXTO ES NULO
      */
     fun validarCampoNulo(texto : String): Boolean{
-        return texto.equals(" ") || texto.length == 0
+        return texto.equals(" ") || return texto.equals("  ") || return texto.equals("   ") || texto.length == 0
     }
 
     /**
@@ -25,6 +26,6 @@ class Validate {
      * FUNCION QUE VALIDA SI ES CORRECTO EL FORMATO DEL NOMBRE SEGUN UNA EXPRESION REGULAR PREDETERMINADA
      */
     fun validarFormatoEmail(correo : String): Boolean{
-        return Patterns.EMAIL_ADDRESS.matcher(correo).matches()
+        return (!correo.isEmpty() && Patterns.EMAIL_ADDRESS.matcher(correo).matches())
     }
 }

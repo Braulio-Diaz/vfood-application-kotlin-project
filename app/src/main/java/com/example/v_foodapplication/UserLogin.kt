@@ -3,6 +3,7 @@ package com.example.v_foodapplication
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Patterns
 import android.widget.Button
 import android.widget.Switch
 import android.widget.Toast
@@ -35,6 +36,11 @@ class UserLogin : AppCompatActivity() {
 
             val validate = Validate()
             if (validate.validarCampoNulo(email)) til_email.error = getString(R.string.null_field_error) else til_email.error = ""
+            if (validate.validarFormatoEmail(email)) {
+                Toast.makeText(this, "Email verificado!", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this, "Ingrese un email valido", Toast.LENGTH_SHORT).show()
+            }
             if (validate.validarCampoNulo(password)) til_password.error = getString(R.string.null_field_error) else til_password.error = ""
 
             Toast.makeText(this@UserLogin,email+" "+password,Toast.LENGTH_SHORT).show()

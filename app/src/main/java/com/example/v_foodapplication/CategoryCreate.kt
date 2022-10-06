@@ -21,9 +21,11 @@ class CategoryCreate : AppCompatActivity() {
         btn_category_create.setOnClickListener {
 
             var category_create = til_category_create.editText?.text.toString()
+            var category_date = til_categoy_date.editText?.text.toString()
             var validate = Validate()
 
             if (validate.validarCampoNulo(category_create)) til_category_create.error = getString(R.string.null_field_error) else til_category_create.error = ""
+            if (validate.validarCampoNulo(category_date)) til_categoy_date.error = getString(R.string.null_field_error) else til_categoy_date.error = ""
 
             Toast.makeText(this@CategoryCreate, "Cateogría creada", Toast.LENGTH_SHORT).show()
 

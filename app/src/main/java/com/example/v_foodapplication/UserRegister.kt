@@ -3,6 +3,7 @@ package com.example.v_foodapplication
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Patterns
 import android.widget.Button
 import android.widget.Toast
 import com.google.android.material.textfield.TextInputLayout
@@ -36,10 +37,18 @@ class UserRegister : AppCompatActivity() {
             if (validate.validarCampoNulo(name)) til_name.error = getString(R.string.null_field_error) else til_name.error = ""
             if (validate.validarCampoNulo((surname))) til_surname.error = getString(R.string.null_field_error) else til_surname.error = ""
             if (validate.validarCampoNulo(formEmail)) til_form_email.error = getString(R.string.null_field_error) else til_form_email.error = ""
+            if (validate.validarFormatoEmail(formEmail)) {
+                Toast.makeText(this, "Email verificado!", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this, "Ingrese un email valido", Toast.LENGTH_SHORT).show()
+            }
             if (validate.validarCampoNulo(formPassword)) til_form_password.error = getString(R.string.null_field_error) else til_form_password.error = ""
             if (validate.validarCampoNulo(formRepeatPassword)) til_form_repeat_password.error = getString(R.string.null_field_error) else til_form_repeat_password.error = ""
 
-            Toast.makeText(this@UserRegister, "Usuario creado", Toast.LENGTH_SHORT).show()
+            //Toast.makeText(this@UserRegister, "Usuario creado", Toast.LENGTH_SHORT).show()
+
+            //val intent = Intent(this@UserRegister,UserLogin::class.java)
+            //startActivity(intent)
         }
     }
 }
