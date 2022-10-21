@@ -62,7 +62,7 @@ class UserLogin : AppCompatActivity() {
 
                     Toast.makeText(this@UserLogin, "Bienvenido "+login_user, Toast.LENGTH_SHORT).show()
 
-                    val intent = Intent(this@UserLogin,Category::class.java)
+                    val intent = Intent(this@UserLogin,SplshScreen::class.java)
                     startActivity(intent)
                 }
                 else{
