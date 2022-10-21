@@ -3,19 +3,26 @@ package com.example.v_foodapplication
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Patterns
 import android.widget.Button
 import android.widget.Switch
 import android.widget.Toast
+import androidx.lifecycle.lifecycleScope
+import androidx.room.Room
 import com.google.android.material.textfield.TextInputLayout
+import kotlinx.coroutines.launch
+import roomDatabase.Db
 
 class UserLogin : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_login)
 
+        //INICIALIZAMOS LA BASE DE DATOS
+        val room = Room.databaseBuilder(this, Db::class.java,"database-chichi").allowMainThreadQueries().build()
+
+
         //DECLARAMOS LAS VARIABLES Y LAS REFERENCIAMOS CON EL ID INGRESADO EN EL LAYOUT
-        val til_email = findViewById<TextInputLayout>(R.id.til_email)
+        val til_login_user = findViewById<TextInputLayout>(R.id.til_login_user)
         val til_password = findViewById<TextInputLayout>(R.id.til_password)
         val btn_register = findViewById<Button>(R.id.btn_register)
         val btn_login = findViewById<Button>(R.id.btn_login)
@@ -30,23 +37,39 @@ class UserLogin : AppCompatActivity() {
         //CAPTURA DATOS Y LOS MUESTRA POR PANTALLA Y LOS VALIDA
         btn_login.setOnClickListener {
 
-            var email = til_email.editText?.text.toString()
+            //SE CAPTURAN LOS DATOS INGRESADOS
+            var login_user = til_login_user.editText?.text.toString()
             var password = til_password.editText?.text.toString()
             var rememberUser = sw_rememberUser.isChecked
 
+            /*
             val validate = Validate()
-            if (validate.validarCampoNulo(email)) til_email.error = getString(R.string.null_field_error) else til_email.error = ""
+            if (validate.validarCampoNulo(login_user)) til_login_user.error = getString(R.string.null_field_error) else til_login_user.error = ""
             if (validate.validarFormatoEmail(email)) {
                 Toast.makeText(this, "Email verificado!", Toast.LENGTH_SHORT).show()
             } else {
                 Toast.makeText(this, "Ingrese un email valido", Toast.LENGTH_SHORT).show()
             }
             if (validate.validarCampoNulo(password)) til_password.error = getString(R.string.null_field_error) else til_password.error = ""
+            //Toast.makeText(this@UserLogin,email+" "+password,Toast.LENGTH_SHORT).show()
+            */
 
-            Toast.makeText(this@UserLogin,email+" "+password,Toast.LENGTH_SHORT).show()
+            //INSERTAMOS LA INFORMACION EN LA DB
+            lifecycleScope.launch{
+                val response = room.daoUsuario().login(login_user, password)
 
-            val intent = Intent(this@UserLogin,Category::class.java)
-            startActivity(intent)
+                if (response.size == 1){
+
+                    Toast.makeText(this@UserLogin, "Bienvenido "+login_user, Toast.LENGTH_SHORT).show()
+
+                    val intent = Intent(this@UserLogin,Category::class.java)
+                    startActivity(intent)
+                }
+                else{
+                    til_login_user.error = "Usuario o contraseña incorrecta"
+                    til_password.error = "Usuario o contraseña incorrecta"
+                }
+            }
         }
     }
 }

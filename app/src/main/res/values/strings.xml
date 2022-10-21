@@ -3,11 +3,13 @@
     //Login
     <string name="BTN_user">Iniciar sesión</string>
     <string name="BTN_register">Registrarse</string>
+    <string name="TXT_login_user">Usuario</string>
     <string name="TXT_email">E-mail</string>
     <string name="TXT_password">Contraseña</string>
     <string name="SW_rememberuser">Recordar usuario</string>
 
     //Registrar Usuario
+    <string name="TXT_user">Nombre de suario</string>
     <string name="TXT_name">Nombre</string>
     <string name="TXT_surname">Apellido</string>
     <string name="TXT_repeatpassword">Repetir contraseña</string>
@@ -19,6 +21,7 @@
     <string name="TXT_tofu">Tofu</string>
     <string name="TXT_category_name">Categoría</string>
     <string name="TXT_date">Seleccionar fecha</string>
+    <string name="TXT_hour">Seleccionar hora</string>
 
     //Crear
     <string name="BTN_create">Crear</string>
