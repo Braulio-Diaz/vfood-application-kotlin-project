@@ -24,7 +24,7 @@ class UserRegister : AppCompatActivity() {
         this.supportActionBar?.hide()
 
         //INICIALIZAMOS LA BASE DE DATOS
-        val room = Room.databaseBuilder(this, Db::class.java,"database-chichi").allowMainThreadQueries().build()
+        val room = Room.databaseBuilder(this, Db::class.java,"database-charizard").allowMainThreadQueries().build()
 
         //DECLARAMOS LAS VARIABLES
         val til_register_user_name = findViewById<TextInputLayout>(R.id.til_register_user_name)
@@ -73,7 +73,7 @@ class UserRegister : AppCompatActivity() {
 
                 if (validate.validarCampoNulo(register_user_name) || validate.validarCampoNulo(name) || validate.validarCampoNulo(surname) || validate.validarCampoNulo(formEmail) || validate.validarCampoNulo(formPassword)){
 
-                    Toast.makeText(this@UserRegister, "Error al registrarse", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@UserRegister, "Ingrese sus datos", Toast.LENGTH_SHORT).show()
                 }
                 else{
                     val id = room.daoUsuario().agregarUsuario(usuario)

@@ -42,6 +42,7 @@
 
     //Validaciones
     <string name="null_field_error">Campo requerido</string>
+    <string name="incorrect_user_or_password">Usuario o contraseña incorrecta</string>
     <string name="invalid_email_format">Formato de correo invalido</string>
     <string name="invalid_name_format">Ingrese solo letras</string>
 </resources>
